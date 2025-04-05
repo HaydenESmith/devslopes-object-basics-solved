@@ -26,3 +26,16 @@ const dominos = {
   zipcode: 54321,
   acceptsReservations: true,
 };
+
+function printPizzaPlace(obj) {
+  for (key in obj) {
+    console.log(`${key}: ${obj[key]}`);
+  }
+}
+
+printPizzaPlace(dominos);
+
+const toppingsPriceRange = (obj) => {
+  for (key in this[pizzaToppings]) {
+  }
+};
