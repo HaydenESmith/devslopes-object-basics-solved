@@ -36,6 +36,26 @@ function printPizzaPlace(obj) {
 printPizzaPlace(dominos);
 
 const toppingsPriceRange = (obj) => {
-  for (key in this[pizzaToppings]) {
+  const price = obj.pizzaToppings;
+  let lowestPrice = Infinity;
+  let highestPrice = -Infinity;
+
+  for (let topping in toppings) {
+    const price = toppings[topping];
+
+    if (price < lowestPrice) {
+      lowestPrice = price;
+    }
+    if (price > highestPrice) {
+      highestPrice = price;
+    }
   }
+  return [lowestPrice, highestPrice];
+};
+
+const calculateAverageRating = (obj) => {
+  const rating = Object.values(obj.starReviews);
+  const sum = rating.reduce((acc, curr) => acc + curr, 0);
+  const average = sum / rating.length;
+  return average;
 };
