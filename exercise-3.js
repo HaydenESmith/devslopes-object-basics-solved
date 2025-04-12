@@ -36,18 +36,18 @@ function printPizzaPlace(obj) {
 printPizzaPlace(dominos);
 
 const toppingsPriceRange = (obj) => {
-  const price = obj.pizzaToppings;
+  const toppings = obj.pizzaToppings;
   let lowestPrice = Infinity;
   let highestPrice = -Infinity;
 
   for (let topping in toppings) {
-    const price = toppings[topping];
+    const toppingPrice = toppings[topping];
 
-    if (price < lowestPrice) {
-      lowestPrice = price;
+    if (toppingPrice < lowestPrice) {
+      lowestPrice = toppingPrice;
     }
-    if (price > highestPrice) {
-      highestPrice = price;
+    if (toppingPrice > highestPrice) {
+      highestPrice = toppingPrice;
     }
   }
   return [lowestPrice, highestPrice];
